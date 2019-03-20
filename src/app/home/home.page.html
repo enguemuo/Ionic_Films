@@ -1,12 +1,26 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="custom-yellow">
     <ion-title>
-      Ionic Blank
+      MOVIES
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <div>
+    <h1 text-center>Movies Search Engine</h1>
+    <br>
+    <ion-searchbar [(ngModel)]="searchTerm" animated placeholder="Search movies by name"
+      (keyup)="setFilteredMovies($event)"></ion-searchbar>
+    <div *ngIf="searching" class="spinner-container">
+      <ion-spinner></ion-spinner>
+    </div>
+    <ion-list inset class="list item">
+      <ion-item *ngFor="let item of movies.Search; let i = index" (click)="navigateToDetails(item.Title)">
+        <p>{{ movies.Search[i].Title }}</p>
+      </ion-item>
+    </ion-list>
+    <!--ion-button expand="block" (click)="showToast()">Show toast</ion-button>
+  <ion-button href="/detail">Go to detail href</ion-button>
+  <ion-button (click)="navigate()">Go to detail with method</ion-button-->
+  </div>
 </ion-content>

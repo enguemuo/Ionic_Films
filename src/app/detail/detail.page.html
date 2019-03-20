@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="custom-yellow">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{film}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div style="overflow-y:scroll;">
+  <img src='{{movieDetails.Poster}}'>
+  <div class="details">
+    <p><b>Title: </b>{{movieDetails.Title}}</p>
+    <p><b>Year: </b>{{movieDetails.Year}}</p>
+    <p><b>Released: </b>{{movieDetails.Released}}</p>
+    <p><b>Runtime: </b>{{movieDetails.Runtime}}</p>
+    <p><b>Genre: </b>{{movieDetails.Genre}}</p>
+    <p><b>Director: </b>{{movieDetails.Director}}</p>
+    <p><b>Actors: </b>{{movieDetails.Actors}}</p>
+    <p><b>Plot: </b>{{movieDetails.Plot}}</p>
+  </div>
+</div>
+<ion-content padding>
+
+</ion-content>
